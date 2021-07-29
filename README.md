@@ -30,6 +30,9 @@
   
   #### 21/7/29 ~ 21/8/2
   
-    * Hong's Part : 검색창 페이지, 전적 리스트 페이지 구현
-    * Hyun's Part : Riot API를 이용해서 전적 가져오기
+    * Hong's Part
+      * 검색창 페이지, 전적 리스트 페이지 구현
+      
+    * Hyun's Part
+      * Riot API를 이용해서 전적 가져오기
   
