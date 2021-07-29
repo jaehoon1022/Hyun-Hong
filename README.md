@@ -10,7 +10,7 @@
  
   
 - Server
- - apache Tomcat
+  - Apache Tomcat
 
 - DataBase
   - MySQL
