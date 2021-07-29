@@ -5,7 +5,7 @@
   - JavaScript
   - Java
   
-- ramework
+- Framework
   - Spring Boot
  
   
