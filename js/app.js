@@ -1,9 +1,13 @@
- 
-  const loginBtn = document.querySelector("#login-form input:last-child");
+const search = document.querySelector('#main_Search')
+const searchBtn = document.querySelector('header button')
+
+function searchClick(){
+  if (search.value.trim() != ""){
   
-  function loginBtnClick() {
-    location.href = "statistics.html";
+    console.log(search.value.trim())
+    // location.href = `find?id=${search.value.trim()}`
+    location.href = `statistics.html`
+    document.id.submit();
   }
-  
-  loginBtn.addEventListener("click", loginBtnClick);
-  
+}
+searchBtn.addEventListener('click',searchClick)
