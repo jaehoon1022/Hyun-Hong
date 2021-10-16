@@ -1,5 +1,0 @@
-const Sorting = () =>{
-
-}
-
-export {Sorting}
