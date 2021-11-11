@@ -36,7 +36,7 @@ public class ApiController {
         UserService userService = new UserServiceImpl();
 
         log.info("---요청이 왔습니다.---={}", userService.essentialData(summonerName));
-
+        
         return userService.essentialData(summonerName);
     }
 
