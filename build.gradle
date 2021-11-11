@@ -31,6 +31,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+//   AppName-plain.jar 를 생성하지 않기위한 명령어
+// App.jar -> bootJar Task로 생성 된것,
+// App-plain.jar -> build Task로 생성된 것
+jar {
+	enabled = false
+}
+
 test {
 	useJUnitPlatform()
 }
