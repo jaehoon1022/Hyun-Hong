@@ -1,11 +1,13 @@
-package com.hhgg.dto;
+package com.hhgg.data.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Service;
 
 @Getter @Setter
 @AllArgsConstructor
+@Service
 public class SummonerDTO {
     private String accountId;
     private int profileIconId;

@@ -1,4 +1,4 @@
-package com.hhgg.dto;
+package com.hhgg.data.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

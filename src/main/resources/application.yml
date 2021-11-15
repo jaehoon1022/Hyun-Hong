@@ -1,2 +1,13 @@
 #api-key: RGAPI-fbbd0d1e-dbac-4405-976d-2da608ac552a
 
+# MySQL DB Setting
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/heroku_39cb7bb6e3697b0?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    username: bb047a724dd487
+    password: e938ea0e
+
+#MyBatis Mapper
+mybatis:
+  mapper-locations: classpath:com/hhgg/mapper/*.xml

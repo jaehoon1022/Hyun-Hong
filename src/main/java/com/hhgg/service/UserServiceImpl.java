@@ -1,24 +1,18 @@
 package com.hhgg.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hhgg.dto.EssentialDTO;
-import com.hhgg.dto.LeagueEntryDTO;
-import com.hhgg.dto.SummonerDTO;
+import com.hhgg.data.dto.SummonerDTO;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-
+@Service
 @Slf4j
 public class UserServiceImpl implements UserService{
 
@@ -31,6 +25,7 @@ public class UserServiceImpl implements UserService{
     private RestTemplate restTemplate = new RestTemplate();
     private ObjectMapper objectMapper = new ObjectMapper();
     private SummonerDTO summonerDTO = new SummonerDTO();
+
 
 
     @Override
@@ -67,24 +62,23 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public Map<String, Object> essentialData(String summonerName) throws JsonProcessingException {
+    public SummonerDTO essentialData(String summonerName) throws JsonProcessingException {
 
-        Map<String, Object> maps = new HashMap<>();
+//        Map<String, Object> maps = new HashMap<>();
         ResponseEntity<String> responseName = findSummonerName(summonerName);
         summonerDTO = setDTO(responseName);
 
-        ResponseEntity<String> byEncryptId = findEncryptId(summonerDTO.getId());
-        List<LeagueEntryDTO> list = objectMapper.readValue(byEncryptId.getBody(),
-                new TypeReference<List<LeagueEntryDTO>>() {});
+//        ResponseEntity<String> byEncryptId = findEncryptId(summonerDTO.getId());
+//        List<LeagueEntryDTO> list = objectMapper.readValue(byEncryptId.getBody(),
+//                new TypeReference<List<LeagueEntryDTO>>() {});
 
 //        Date date = new Date(summonerDTO.getRevisionDate());
 //        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 //        summonerDTO.setRevisionDate(();
 
-        maps.put("summonerDTO", summonerDTO);
-        maps.put("LeagueEntryDTO", list);
+//        maps.put("summonerDTO", summonerDTO);
+//        maps.put("LeagueEntryDTO", list);
 
-
-        return maps;
+        return summonerDTO;
     }
 }
