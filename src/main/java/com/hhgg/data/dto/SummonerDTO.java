@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Getter @Setter
 @AllArgsConstructor
-@Service
 public class SummonerDTO {
     private String accountId;
     private int profileIconId;

@@ -4,7 +4,8 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/heroku_39cb7bb6e3697b0?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+#    url: jdbc:mysql://localhost:3306/heroku_39cb7bb6e3697b0?useUnicode=yes&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://bb047a724dd487:e938ea0e@us-cdbr-east-04.cleardb.com/heroku_39cb7bb6e3697b0?reconnect=true
     username: bb047a724dd487
     password: e938ea0e
 
