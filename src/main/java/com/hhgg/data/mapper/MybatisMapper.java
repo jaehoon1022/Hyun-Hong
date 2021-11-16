@@ -1,10 +1,7 @@
 package com.hhgg.data.mapper;
 
 import com.hhgg.data.dto.SummonerDTO;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface MybatisMapper {
@@ -21,6 +18,12 @@ public interface MybatisMapper {
             ")")
     int insert(@Param("summonerDTO") SummonerDTO summonerDTO);
 
-    @Select("SELECT * FROM SUMMONER WHERE NAME = #{summonerName}")
-    SummonerDTO findByName(@Param("summonerName") String summonerName);
+    @Select("SELECT * FROM SUMMONER WHERE id = #{summonerId}")
+    SummonerDTO findByName(@Param("summonerId") String summonerId);
+
+    @Update("UPDATE SUMMONER SET name = #{summonerDTO.name}, summonerLevel= #{summonerDTO.summonerLevel}," +
+            "profileIconId = #{summonerDTO.profileIconId}, revisionDate = #{summonerDTO.revisionDate} " +
+            "WHERE ID = #{summonerDTO.id}")
+    SummonerDTO updateByName(@Param("summonerDTO") SummonerDTO summonerDTO);
+
 }

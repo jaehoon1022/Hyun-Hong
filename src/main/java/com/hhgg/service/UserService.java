@@ -10,9 +10,7 @@ public interface UserService {
 
     public SummonerDTO setDTO(ResponseEntity<String> responseEntity) throws JsonProcessingException;
 
-    public ResponseEntity<String> findEncryptId(String summonerId);
-
-    public SummonerDTO essentialData(String summonerName) throws JsonProcessingException;
+    public ResponseEntity<String> findByEncryptId(String summonerId);
 
 
     }
